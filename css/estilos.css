@@ -1,0 +1,28 @@
+h1 {
+background-color: firebrick;
+border-style:double;
+border-color: black;
+}
+
+.titulo-h2{
+    font-family: serif,'Courier New', Courier, monospace;
+    border-style:solid;
+    border-color: navy;
+    color: #050505;
+    font-variant: small-caps;
+   
+    
+}
+
+h3 {
+text-align: center;
+border-bottom: black;
+
+}
+
+.tema-pagina{
+text-align: justify;
+text-decoration:overline;
+margin: 5%;
+padding: 5%;
+}
