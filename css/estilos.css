@@ -19,16 +19,24 @@ h1 {
 }
 
 .titulo-h2 {
+  background-color:black ;
     border-style: solid;
     border-color: navy;
-    color: #050505;
+    display: flex;
+    border-radius: 5px;
+    color: #ffffff;
+    font-style: italic;
     font-variant: small-caps;
 }
 
 h3 {
     text-align: center;
     border-bottom: black;
-
+}
+#subtitulos {
+  text-align: center;
+  border-bottom: black;
+  border-style: double;
 }
 
 .tema-pagina {
@@ -61,24 +69,24 @@ h3 {
     /* borde redondeado */
 }
 
-nav {
+#menuNav {
     background-color: #333;
-    color: #fff;
+    color: #f00;
     font-family: Arial, sans-serif;
   }
   
-  ul {
+  #cabecera {
     list-style: none;
     margin: 0;
     padding: 0;
   }
   
-  li {
+  #etiquetas {
     display: inline-block;
     margin-right: 20px;
   }
   
-  a {
+  /*a {
     color: #fff;
     text-decoration: none;
     padding: 10px;
@@ -121,5 +129,6 @@ nav {
     #menu-toggle:checked + label + ul {
       display: block;
     }
-  }
+  }*/
+
   
