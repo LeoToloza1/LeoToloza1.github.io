@@ -148,11 +148,14 @@ h3 {
     background-color: #b1b1b1;
     border: 1px solid #1a1919;
     padding: 10px;
+    transition: all 0.5s ease; /* Agregamos una animación de transición a todos los cambios de estilo con duración de 0.5 segundos */
   }
   
   .desplegable:hover .contenido {
     display: block;
+    top: 60%; /* Cambiamos la posición top para que se vea el movimiento */
   }
+  
 #historia{
 text-align: justify;
 text-decoration: solid;
