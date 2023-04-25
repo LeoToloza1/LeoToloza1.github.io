@@ -5,7 +5,11 @@
     /*background-image: url(/img/fondo2.jpg);
     background-repeat: no-repeat;
     background-position: center;*/
-    
+}
+body {
+  background-image: url("/img/fondo.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 h1 {
@@ -161,7 +165,16 @@ text-align: justify;
 text-decoration: solid;
 
 }
-
+.texto{
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: justify;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 1.5;
+}
 
 
   
