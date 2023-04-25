@@ -70,8 +70,8 @@ h3 {
 }
 
 #menuNav {
-    background-color: #333;
-    color: #f00;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
     font-family: Arial, sans-serif;
   }
   
@@ -86,7 +86,7 @@ h3 {
     margin-right: 20px;
   }
   
-  /*a {
+  a {
     color: #fff;
     text-decoration: none;
     padding: 10px;
@@ -129,6 +129,36 @@ h3 {
     #menu-toggle:checked + label + ul {
       display: block;
     }
-  }*/
+  }
+  ol {
+    list-style-type: none;
+  }
+  
+  .desplegable {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .contenido {
+    display: none;
+    position: inherit;
+    top: 50%;
+    left: 10;
+    background-color: #b1b1b1;
+    border: 1px solid #1a1919;
+    padding: 10px;
+  }
+  
+  .desplegable:hover .contenido {
+    display: block;
+  }
+#historia{
+text-align: justify;
+text-decoration: solid;
+
+}
+
+
 
   
