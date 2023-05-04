@@ -2,21 +2,21 @@
 margin: 0;
 padding: 0;
 box-sizing: border-box;
+font-family: sans-serif;
+-ms-text-size-adjust: 100%;
+-webkit-text-size-adjust: 100%
 }
-/* Background */
-body {
-  color: #fff;
-  background: linear-gradient(45deg,red,blue,green,black);
-  background-size:cover;
+.encabezado {
+  background-color: #fff; 
+  font-family: Roboto,sans-serif;
+  height: 50px;
   position: relative;
-  animation: cambiar 10s ease-in-out infinite;
+  width: 100%;
+  align-items: center;
+display: block;
 }
 
-@keyframes cambiar {
-  0%{background-position: 0 50%;}
-  50%{background-position: 100% 50%;}
-  100%{background-position: 0 50%;}
-}
+
 .navegador{
   width: 400px;
   height: 200px;
@@ -36,16 +36,15 @@ body {
   height: 100%; /* Establece la altura al 100% para que ocupe todo el espacio disponible */
   gap: 10px; /* Establece el espacio entre los elementos */
 }
+
 .navegador a {
   color: white;
   font-weight: bold;
   text-decoration: none;
   padding: 10px 20px;
-  background-color: black;
   border-radius: 10px;
   transition: all 0.3s ease; /* Agrega una transición para dar una animación suave */
 }
-
 .navegador a:hover {
   transform: translateY(-5px); /* Agrega una animación de levantamiento cuando el cursor pasa sobre los elementos */
 }
@@ -72,9 +71,10 @@ body {
 }
 /* Títulos */
 h1 {
+  margin: .67em 0;
   font-size: 4rem;
   letter-spacing: 2px;
-  border: solid 3px #fff;
+  border: solid 3px #000000;
   border-radius: 25px;
   text-align: center;
   margin-top: 5px;
@@ -85,7 +85,6 @@ h1 {
 
 h3, h4 {
   text-align: center;
-  border-bottom: 1px solid black;
 }
 
 #subtitulos {
@@ -124,14 +123,94 @@ h3, h4 {
   object-fit: cover;
   margin-top: 50px;
 }
-
-/* Menú de artículos */
-#menuArticulos {
-  position: relative;
-  border:#fff;
+#menuNav {
+  background-color: #5f5b5b;
+  color: rgb(255, 255, 255);
+  font-family: Arial, sans-serif;
+  margin: 15%;
+  text-align: center;
+  border-radius: 25px;
+  padding: 15px;
+}
+a {
+  color:#000000;
+  text-decoration: none;
+  padding: 5px;
+  transition: background-color 1.5s;
+  border-radius: 25px;
+  margin: 2px;
 }
 
-main{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+a:hover {
+  background-color: #0e025a;
 }
+
+#menu-toggle {
+  display: none;
+}
+
+label {
+  display: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px){
+  label {
+    display: block;
+  }
+}
+
+  /* Menú de artículos */
+  #menuArticulos {
+    position: relative;
+    border: solid black 1px;
+  }
+  #etiquetas {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  .desplegable {
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .contenido {
+    display: none;
+    position: inherit;
+    top: 50%;
+    left: 10;
+    background-color: #b1b1b1;
+    border: 1px solid #1a1919;
+    border-radius: 25px;
+    padding: 10px;
+    transition: all 0.5s ease; /* Agregamos una animación de transición a todos los cambios de estilo con duración de 0.5 segundos */
+  }
+  
+  .desplegable:hover .contenido {
+    display: block;
+    top: 60%; /* Cambiamos la posición top para que se vea el movimiento */
+    margin: 3%;
+  }
+  /*.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #a93d3d;
+    color: #be6115;
+    transition: all 0.3s ease;
+  }
+  
+  .toggle-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #000000;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }*/
+  
