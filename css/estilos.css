@@ -54,21 +54,59 @@ display: block;
   display: grid;
   grid-template-columns: 50%;
 }
-
 .contenedor {
-  display: flex;
- border: black solid 4px;
-  flex-wrap: wrap;
+  width: 100%;
+  max-width: 120em;
+  background-color: grey;
 }
 
+.contenedor .carrusel {
+  width: 200%;
+  background-color: orange;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em;
+  transition: all 0.5s ease;
+  transform: translate(-50%);
+}
+
+.carrusel .imagen {
+  width: calc(100% / 20);
+  min-height: 10vh;
+  background-color: #000000;
+}
+
+.carrusel .puntos {
+  width: 100%;
+  margin: 1em 0 0;
+  background-color: #000000;
+  padding: 1em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.carrusel .punto {
+  width: 2em;
+  height: 1em;
+  margin: 0.2em;
+}
+
+.carrusel .punto.activo {
+  background-color: #0e025a;
+}
+
+/*
 .imagen {
   width: 400px;
   height: 300px;
   object-fit: scale-down;
   margin: 10px;
   border: solid black 10px;
-
-}
+}*/
 /* Títulos */
 h1 {
   margin: .67em 0;
