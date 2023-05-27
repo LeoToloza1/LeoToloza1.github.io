@@ -6,51 +6,84 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/estilos.css">
-  <script src="js/document.js"> </script>
+  <!--<script src="js/document.js"> </script>-->
  <title>In Action</title>
 </head>
 <body>
-  <header>
-    <h1>Galeria de Fotos</h1>
+  <h1>Galeria de Fotos</h1>
+    <header class="encabezado">
+      <nav id="menuNav">
+        <a class="nav" href="/index.html">Home</a>
+        <a class="nav" href="articulo.html">Un poco de info</a>
+        <a class="nav" href="enAccion.html">In ACTION!</a>
+        <a class="nav" href="/aboutMe.html">AboutMe</a>
+        <a class="nav" href="formulario.html">Contactame</a>
+    </nav>
   </header>
-  <div> <h2>Acá una pequeña galeria de fotos</h2>
-      <div class="contenedor">
-        <div class="carrusel">
-          <img class="imagen" src="img/Show.jpg" alt="Magia">
-          <img class="imagen" src="img/Diario.jpg" alt="Magia">
-          <img class="imagen" src="img/VLarca.jpg" alt="Magia">
-          <img class="imagen" src="img/VLarca2.jpg" alt="Magia">
-          <img class="imagen" src="img/VLarca3.jpg" alt="Magia">
-          <img class="imagen" src="img/LosMolles.jpg" alt="Magia">
-          <img class="imagen" src="img/recuerdo.jpg" alt="Magia">
-          <img class="imagen" src="img/Merlo.jpg" alt="Magia">
-          <img class="imagen" src="img/InShot_20180429_014548070.jpg" alt="Magia">
-          <img class="imagen" src="img/escenario.jpg" alt="trabajando">
-          <img class="imagen" src="/img/Casino.jpg" alt="Casino Flamingo">
-          <img class="imagen" src="/img/Amigos.jpg" alt="amigos">
-          <img class="imagen" src="/img/Amigos2.jpg" alt="amigos">
-          <img class="imagen" src="/img/Avion.jpg" alt="avion">
-          <img class="imagen" src="/img/Peru.jpg" alt="peru">
-          <img class="imagen" src="/img/Mexico2.jpg" alt="mexico">
-          <img class="imagen" src="/img/cartelMexico.jpg" alt="mexico">
-          <img class="imagen" src="/img/cumple.jpg" alt="show">
-          <img class="imagen" src="/img/Mexico.jpg" alt="mexico">
-          <img class="imagen" src="/img/Policia.jpg" alt="polcia">
-        </div>
-        <ul class="puntos">
-          <li class="punto activo"></li>
-          <li class="punto"></li>
-        </ul>
+  <h3>Acá una pequeña galeria de fotos</h3>
+  <section class="contenedor">
+    <div class="slider-wrapper">
+      <div class="slider">
+        <img id="slider1" src="img/Amigos.jpg">
+        <img id="slider2" src="img/Amigos2.jpg">
+        <img id="slider3" src="img/Show.jpg" alt="Magia">
+        <img id="slider4" src="img/Diario.jpg" alt="Magia">
+        <img id="slider5" src="img/VLarca.jpg" alt="Magia">
+        <img id="slider6" src="img/VLarca2.jpg" alt="Magia">
+        <img id="slider7" src="img/VLarca3.jpg" alt="Magia">
+        <img id="slider8" src="img/LosMolles.jpg" alt="Magia">
+        <img id="slider9" src="img/recuerdo.jpg" alt="Magia">
+        <img id="slider10" src="img/Merlo.jpg" alt="Magia">
+        <img id="slider11" src="img/InShot_20180429_014548070.jpg" alt="Magia">
+        <img id="slider12" src="img/escenario.jpg" alt="trabajando">
+        <img id="slider13" src="/img/Casino.jpg" alt="Casino Flamingo">
+        <img id="slider14" src="/img/Avion.jpg" alt="avion">
+        <img id="slider15" src="/img/Peru.jpg" alt="peru">
+        <img id="slider16" src="/img/Mexico2.jpg" alt="mexico">
+        <img id="slider17" src="/img/cartelMexico.jpg" alt="mexico">
+        <img id="slider18" src="/img/cumple.jpg" alt="show">
+        <img id="slider19" src="/img/Mexico.jpg" alt="mexico">
+        <img id="slider20" src="/img/Policia.jpg" alt="polcia">
       </div>
-      
+      <div class="slider-nav">
+        <a href="#slider1"></a>
+        <a href="#slider2"></a>
+        <a href="#slider3"></a>
+        <a href="#slider4"></a>
+        <a href="#slider5"></a>
+        <a href="#slider6"></a>
+        <a href="#slider7"></a>
+        <a href="#slider8"></a>
+        <a href="#slider9"></a>
+        <a href="#slider10"></a>
+        <a href="#slider11"></a>
+        <a href="#slider12"></a>
+        <a href="#slider13"></a>
+        <a href="#slider14"></a>
+        <a href="#slider15"></a>
+        <a href="#slider16"></a>
+        <a href="#slider17"></a>
+        <a href="#slider18"></a>
+        <a href="#slider19"></a>
+        <a href="#slider20"></a>
+      </div>
+  
+    </div>
+  </section>
 
-  </div>
     <h4>Estas fueron algunas de mis aventuras</h4>
-    <p>En estas fotos aparecen varios de mis amigos magos, en un recuerdo que tengo de cuando fui a Mexico a
-      trabajar para un congreso, shows en zonas cercanas a donde vivo y shows en teatros, notas en un diario de San
-      Luis.</p>
-    <p>Una de mis favoritas, con el libro de fuego y en un importante casino de la Villa de Merlo.</p>
-    <p>
+    <div>
+      <p class="texto-estilo">En estas fotos aparecen varios de mis amigos magos, recuerdos que tengo de cuando fui a Mexico a
+        trabajar para un congreso, shows en zonas cercanas a donde vivo y shows en teatros, 
+        nota en un diario de San Luis. 
+        <br> Nota: 
+      <a href="https://www.eldiariodelarepublica.com/nota/2018-2-19-18-36-0-leonel-santiago-toloza-el-mago-de-carpinteria"
+      target="_blank">click aqui para leer la nota</a></p>
+      <p class="texto-estilo">Una de mis favoritas, con el libro de fuego y en un importante casino de la Villa de Merlo.</p>
+      <p>
+    </div>
+<footer>
+  <p>Gracias por ver.</p>
+</footer>    
 </body>
-
 </html>

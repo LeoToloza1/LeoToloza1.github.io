@@ -54,68 +54,72 @@ display: block;
   display: grid;
   grid-template-columns: 50%;
 }
+
 .contenedor {
-  width: 100%;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 90%;
   max-width: 120em;
-  background-color: grey;
+  background-color: rgb(255, 255, 255);
 }
-
-.contenedor .carrusel {
-  width: 200%;
-  background-color: orange;
+.slider-wrapper{
+position: relative;
+max-width: 600px;
+margin: 0 auto;
+}
+.slider{
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2em;
-  transition: all 0.5s ease;
-  transform: translate(-50%);
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  scroll-snap-type: x mandatory;
+scroll-behavior: smooth;
+box-shadow: 0 .25rem .5rem #21212126;
+border-radius: .5rem;
 }
-
-.carrusel .imagen {
-  width: calc(100% / 20);
-  min-height: 10vh;
-  background-color: #000000;
+.slider img {
+  object-fit: scale-down;
+  margin: 10px;
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+border-radius: 3%;
 }
-
-.carrusel .puntos {
-  width: 100%;
-  margin: 1em 0 0;
-  background-color: #000000;
-  padding: 1em;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
+.slider-nav{
+display: flex;
+column-gap: 1rem;
+position: absolute;
+bottom: 5%;
+left: 50%;
+transform: translateX(-50%);
+z-index: 1;
 }
-
-.carrusel .punto {
-  width: 2em;
-  height: 1em;
-  margin: 0.2em;
+.slider-nav a{
+width: .5rem;
+height: .5rem;
+border-radius: 50%;
+background-color: #000000;
+opacity: .75;
+transition: opacity ease 250ms;
 }
-
-.carrusel .punto.activo {
-  background-color: #0e025a;
+.slider-nav a:hover{
+opacity: 1;
 }
-
-/*
 .imagen {
   width: 400px;
   height: 300px;
   object-fit: scale-down;
   margin: 10px;
-  border: solid black 10px;
-}*/
+  border: solid black 5px;
+}
 /* Títulos */
 h1 {
-  margin: .67em 0;
+  margin: 3%;
   font-size: 4rem;
   letter-spacing: 2px;
   border: solid 3px #000000;
   border-radius: 25px;
   text-align: center;
-  margin-top: 5px;
+
 }
 .titulo-h2 {
   margin-top: 50px;
@@ -126,6 +130,7 @@ h3, h4 {
 }
 
 #subtitulos {
+  margin: 5%;
   text-align: center;
   border-bottom: 1px solid black;
   border-style: double;
@@ -165,13 +170,21 @@ h3, h4 {
   background-color: #5f5b5b;
   color: rgb(255, 255, 255);
   font-family: Arial, sans-serif;
-  margin: 15%;
+  margin: auto;
   text-align: center;
   border-radius: 25px;
-  padding: 15px;
+  padding: 10px;
+}
+.nav{
+  color: #000;
+  text-decoration: none;
+  padding: 5px;
+  transition: background-color 1.5s;
+  border-radius: 25px;
+  margin: 2px;
 }
 a {
-  color:#000000;
+  color: royalblue;
   text-decoration: none;
   padding: 5px;
   transition: background-color 1.5s;
@@ -180,7 +193,8 @@ a {
 }
 
 a:hover {
-  background-color: #0e025a;
+  color: #fff;
+  background-color: #3e3481;
 }
 
 #menu-toggle {
@@ -222,7 +236,7 @@ label {
     border: 1px solid #1a1919;
     border-radius: 25px;
     padding: 10px;
-    transition: all 0.5s ease; /* Agregamos una animación de transición a todos los cambios de estilo con duración de 0.5 segundos */
+    transition: all 0.5s ease;
   }
   
   .desplegable:hover .contenido {
@@ -230,25 +244,23 @@ label {
     top: 60%; /* Cambiamos la posición top para que se vea el movimiento */
     margin: 3%;
   }
-  /*.sidebar {
-    position: fixed;
-    top: 0;
-    left: -250px;
-    width: 250px;
-    height: 100%;
-    background-color: #a93d3d;
-    color: #be6115;
-    transition: all 0.3s ease;
+  
+  .texto-estilo {
+    padding: 1%;
+    color: #333;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-align: justify;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    transition: background-color 1s, color 0.5s; /* Transición de 0.5 segundos para el cambio de color de fondo y texto */
   }
   
-  .toggle-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    color: #000000;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-  }*/
+  .texto-estilo:hover {
+    padding: 1%;
+    border-radius: 1%;
+    background-color: #000; /* Color de fondo negro al pasar el cursor */
+    color: #fff; /* Color de texto blanco al pasar el cursor */
+  }
   
