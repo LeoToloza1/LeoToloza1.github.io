@@ -34,23 +34,58 @@ Debe ser desarrollado por el estudiante, es decir sin uso de frameworks. Uso de 
         </nav>
     </header>
     <section>
-        <H1>Formulario de contacto</H1>
-        <div>
-            <form>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre">
-                <br>
-                <input type="submit" value="Enviar">
-            </form>
-        </div>
-    </section>
-    <section>
+        <div class="tema-pagina">
+            <h2>Formulario de contacto</h2>
+            <p class="texto-estilo">
+                En este pequeño formulario de contacto, vas a poder escribirme un comentario o mandarme un mail.
+            </p>
+            <h2>Dejar un comentario</h2>
+  <form id="commentForm">
+    <div>
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" required>
+    </div>
+    <div>
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" required>
+    </div>
+    <div>
+      <label for="comment">Comentario:</label>
+      <textarea id="comment" rows="4" required></textarea>
+    </div>
+    <button type="submit">Enviar comentario</button>
+  </form>
 
+  <div id="commentList">
+    <h1>Comentarios</h1>
+    <ul id="comments"></ul>
+  </div>
 
-        </p>
+  <script>
+    // Obtén referencias a los elementos del DOM
+    const commentForm = document.getElementById('commentForm');
+    const commentList = document.getElementById('comments');
 
-        </div>
-    </section>
+    // Agrega un evento submit al formulario
+    commentForm.addEventListener('submit', function(event) {
+      event.preventDefault(); // Evita que se envíe el formulario por defecto
+
+      // Obtén los valores del formulario
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const comment = document.getElementById('comment').value;
+
+      // Crea un nuevo elemento de comentario
+      const newComment = document.createElement('li');
+      newComment.textContent = `${name} (${email}): ${comment}`;
+
+      // Agrega el nuevo comentario a la lista
+      commentList.appendChild(newComment);
+
+      // Limpia los campos del formulario
+      commentForm.reset();
+    });
+  </script>
 </body>
 
 </html>

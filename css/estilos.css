@@ -121,10 +121,6 @@ h1 {
   text-align: center;
 
 }
-.titulo-h2 {
-  margin-top: 50px;
-}
-
 h3, h4 {
   text-align: center;
 }
@@ -224,27 +220,25 @@ label {
   .desplegable {
     position: relative;
     cursor: pointer;
-    margin-bottom: 10px;
+    margin: 2%;
   }
   
   .contenido {
     display: none;
-    position: inherit;
-    top: 50%;
-    left: 10;
+    position: relative;
     background-color: #b1b1b1;
     border: 1px solid #1a1919;
     border-radius: 25px;
-    padding: 10px;
-    transition: all 0.5s ease;
+    padding: 3%;
+    transition: all 0.2s ease;
   }
-  
+
   .desplegable:hover .contenido {
-    display: block;
-    top: 60%; /* Cambiamos la posición top para que se vea el movimiento */
-    margin: 3%;
-  }
-  
+      display: block;
+      top: 100%;
+      margin: 3%;
+    }
+
   .texto-estilo {
     padding: 1%;
     color: #333;
@@ -263,4 +257,48 @@ label {
     background-color: #000; /* Color de fondo negro al pasar el cursor */
     color: #fff; /* Color de texto blanco al pasar el cursor */
   }
+  .video iframe{
+  display: block;
+  margin: 0 auto;
+  }
   
+  form {
+    margin-bottom: 20px;
+  }
+  
+  label  {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  #commentList {
+    margin-top: 20px;
+  }
+  
+  #comments li {
+    margin-bottom: 10px;
+    list-style: none;
+  }
