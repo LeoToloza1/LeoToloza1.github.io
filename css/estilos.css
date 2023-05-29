@@ -123,6 +123,7 @@ h1 {
 }
 h3, h4 {
   text-align: center;
+  margin: 2%;
 }
 
 #subtitulos {
@@ -239,30 +240,23 @@ label {
       margin: 3%;
     }
 
-  .texto-estilo {
+  .texto{
     padding: 1%;
-    color: #333;
+    color: #000000;
     font-size: 16px;
     font-family: Arial, sans-serif;
     font-weight: bold;
     text-align: justify;
     line-height: 1.5;
     letter-spacing: 1px;
-    transition: background-color 1s, color 0.5s; /* Transición de 0.5 segundos para el cambio de color de fondo y texto */
   }
   
-  .texto-estilo:hover {
-    padding: 1%;
-    border-radius: 1%;
-    background-color: #000; /* Color de fondo negro al pasar el cursor */
-    color: #fff; /* Color de texto blanco al pasar el cursor */
-  }
   .video iframe{
   display: block;
   margin: 0 auto;
   }
   
-  form {
+  #formulario{
     margin-bottom: 20px;
   }
   
@@ -273,7 +267,6 @@ label {
   }
   
   input[type="text"],
-  input[type="email"],
   textarea {
     width: 100%;
     padding: 5px;
@@ -294,11 +287,19 @@ label {
     background-color: #0056b3;
   }
   
-  #commentList {
+  #Comentarios {
     margin-top: 20px;
   }
   
-  #comments li {
+  #ListaComentarios li {
     margin-bottom: 10px;
     list-style: none;
   }
+.textoColumnas{
+  display: flex;
+  justify-content: space-between;
+}
+.columnas{
+ flex-basis: 30%;
+}
+
