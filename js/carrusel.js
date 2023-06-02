@@ -1,6 +1,13 @@
+/*creacion del carrusel con javascript*/
+
+/* --Codigo para verificar si se contectó el js con el html--
 window.addEventListener('load', function () {
     console.log('el contenido ha cargado!');
-})
+})*/
+
+/**
+ * acá declaré y llné el arreglo con las imagenes de la carpeta img.
+ */
 var imagenes = [
     '/img/img1.jpg', '/img/img2.jpg', '/img/img3.jpg', '/img/img4.jpg', '/img/img5.jpg', '/img/img6.jpg',
     '/img/img7.jpg', '/img/img8.jpg', '/img/img9.jpg', '/img/img10.jpg', '/img/img11.jpg', '/img/img12.jpg', '/img/img13.jpg',
@@ -8,14 +15,16 @@ var imagenes = [
     '/img/img21.jpg', '/img/img22.jpg'
   ];
   
-  var contador = 0;
-  
+  let contador = 0;
+  /**
+   * funcion que recibe el contenedor y valida los botones para avanzar o retroceder el carrusel
+   */
   function carrusel(contenedor) {
     contenedor.addEventListener('click', function (e) {
-      var atras = contenedor.querySelector('.atras');
-      var adelante = contenedor.querySelector('.adelante');
-      var img = contenedor.querySelector('img');
-      var objetivo = e.target;
+      let atras = contenedor.querySelector('.atras');
+      let adelante = contenedor.querySelector('.adelante');
+      let img = contenedor.querySelector('img');
+      let objetivo = e.target;
   
       if (objetivo === atras) {
         if (contador > 0) {
@@ -36,9 +45,11 @@ var imagenes = [
       }
     });
   }
-  
+  /**
+   * llamo a la funcion y con el query selector, selecciono el contenedor con los botones de adelante y de atras
+   */
   document.addEventListener("DOMContentLoaded", function () {
-    var contenedor = document.querySelector('.contenedor');
+    let contenedor = document.querySelector('.contenedor');
     carrusel(contenedor);
   });
   

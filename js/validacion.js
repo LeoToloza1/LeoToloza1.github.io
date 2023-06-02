@@ -1,26 +1,28 @@
- // Obtén referencias a los elementos del DOM
- const commentForm = document.getElementById('commentForm');
- const commentList = document.getElementById('comments');
+/**
+ * Traigo los elemnos del dom
+ */
+ const formulario = document.getElementById('formulario');
+ const listaComentario = document.getElementById('ListaComentarios');
  const correoInput = document.getElementById('email');
+ 
+ // Agrego un evento submit al formulario
+  formulario.addEventListener('submit', function(event) {
+   event.preventDefault(); // Esto evita que se envie el formulario por defecto
 
- // Agrega un evento submit al formulario
- commentForm.addEventListener('submit', function(event) {
-   event.preventDefault(); // Evita que se envíe el formulario por defecto
-
-   // Obtén los valores del formulario
-   const name = document.getElementById('name').value;
+   // accedor a los valores del formulario
+   const name = document.getElementById('nombre').value;
    const email = correoInput.value;
-   const comment = document.getElementById('comment').value;
+   const comment = document.getElementById('comentario').value;
 
-   // Crea un nuevo elemento de comentario
-   const newComment = document.createElement('li');
-   newComment.textContent = `${name} (${email}): ${comment}`;
+   // se crea un nuevo elemento de comentario
+   const nuevoComentario = document.createElement('li');
+   nuevoComentario.textContent = `${name} (${email}): ${comment}`;
 
    // Agrega el nuevo comentario a la lista
-   commentList.appendChild(newComment);
+   listaComentario.appendChild(nuevoComentario);
 
    // Limpia los campos del formulario
-   commentForm.reset();
+   formulario.reset();
  });
 
  // Función para validar el email con expresiones regulares
